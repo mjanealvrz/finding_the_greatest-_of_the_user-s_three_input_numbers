@@ -23,9 +23,24 @@ else: greatest_number = third_input_number
 print(f"The greatest number is: {greatest_number}")
 
 #----------------------------------------------------------------------------------------------------------------
+
+# Using tkinter and customtkinter for the program's module
 import tkinter as tk
 from tkinter import Image
 import customtkinter as Ctk
+
+# Welcome window
+window = Ctk.CTk()
+window.title("Numeria")
+window.geometry("600x600")
+
+background_image = tk.PhotoImage(file="Numeria.png")
+background_label = tk.Label(window, image=background_image)
+background_label.place(relwidth=1, relheight=1)
+
+window.mainloop()
+
+
 
 
 
