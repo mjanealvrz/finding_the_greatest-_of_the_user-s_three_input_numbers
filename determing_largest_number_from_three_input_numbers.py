@@ -2,7 +2,7 @@
 # Ask user to input 3 numbers. Find and print the greatest number using only if-else statement
 
 
-# ====================== Actual Code ======================================================
+# ====================== Actual Code ======================================================+=======
 
 # Using tkinter and customtkinter for the program's module
 import tkinter as tk
@@ -10,13 +10,35 @@ from tkinter import Image
 import customtkinter as Ctk
 import time
 
+# Function for clicking the enter botton
 def enter_button():
+
     win = Ctk.CTk()
     win.title("Input three number")
     win.geometry("600x600")
 
     frame = Ctk.CTkFrame(win, width=900, height=500, fg_color="transparent",border_width=5, border_color="#4F7942", bg_color= "transparent", corner_radius=50)
     frame.place(relx=0.5, rely=0.5, anchor= "center")
+
+    # User"s interface to enter the three numbers
+    input_num1_label = Ctk.CTkLabel(frame, text="1st input:", width=10)
+    input_num1_label.place(relx=0.2, rely=0.3, anchor= "center")
+    input_num1_entry = Ctk.CTkEntry(frame )
+    input_num1_entry .place(relx=0.4, rely=0.3, anchor="center")
+
+    input_num2_label = Ctk.CTkLabel(frame, text="2nd input:", width=10)
+    input_num2_label.place(relx=0.2, rely=0.4, anchor= "center")
+    input_num2_entry = Ctk.CTkEntry(frame )
+    input_num2_entry .place(relx=0.4, rely=0.4, anchor="center")
+
+    input_num3_label = Ctk.CTkLabel(frame, text="3rd input:", width=10)
+    input_num3_label.place(relx=0.2, rely=0.5, anchor= "center")
+    input_num3_entry = Ctk.CTkEntry(frame )
+    input_num3_entry .place(relx=0.4, rely=0.5, anchor="center")
+
+
+
+    
 
     win.mainloop()
 
