@@ -21,3 +21,11 @@ else: greatest_number = third_input_number
 
 # -Print the greatest number
 print(f"The greatest number is: {greatest_number}")
+
+#----------------------------------------------------------------------------------------------------------------
+import tkinter as tk
+from tkinter import Image
+import customtkinter as Ctk
+
+
+
