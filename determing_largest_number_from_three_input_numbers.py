@@ -44,54 +44,51 @@ def finding_greatest_number():
     win = Ctk.CTk()
     win.title("Input three number")
     win.geometry("600x600")
-        
+       
 # make GUI components (button, entry fields, and labels).
     # specify where GUI items should be placed in the window
     # attach the method find_greatest() to the button.
 
-    frame = Ctk.CTkFrame(win, width=500, height=500, fg_color="transparent",border_width=5, border_color="#4F7942", bg_color= "transparent", corner_radius=50)
-    frame.place(relx=0.4, rely=0.5, anchor= "center")
+    frame = Ctk.CTkFrame(win, width=500, height=500, fg_color="transparent",border_width=5, border_color="#4F7942", bg_color="#D1FFBD")
+    frame.place(relx=0.5, rely=0.5, anchor= "center")
 
-    input_number1_label = Ctk.CTkLabel(frame, text="1st input:",font=helv37, width=10)
+    input_number1_label = Ctk.CTkLabel(frame, text="1st input:",font=helv37, width=10, bg_color="#D1FFBD")
     input_number1_label.place(relx=0.2, rely=0.3, anchor= "center")
     input_number1_entry = Ctk.CTkEntry(frame )
-    input_number1_entry .place(relx=0.5, rely=0.3, anchor="center")
+    input_number1_entry.place(relx=0.5, rely=0.3, anchor="center")
 
-    input_number2_label = Ctk.CTkLabel(frame, text="2nd input:",font=helv37, width=10)
+    input_number2_label = Ctk.CTkLabel(frame, text="2nd input:",font=helv37, width=10, bg_color="#D1FFBD")
     input_number2_label.place(relx=0.2, rely=0.4, anchor= "center")
     input_number2_entry = Ctk.CTkEntry(frame )
-    input_number2_entry .place(relx=0.5, rely=0.4, anchor="center")
+    input_number2_entry.place(relx=0.5, rely=0.4, anchor="center")
 
-    input_number3_label = Ctk.CTkLabel(frame, text="3rd input:",font=helv37, width=10)
+    input_number3_label = Ctk.CTkLabel(frame, text="3rd input:",font=helv37, width=10, bg_color="#D1FFBD")
     input_number3_label.place(relx=0.2, rely=0.5, anchor= "center")
     input_number3_entry = Ctk.CTkEntry(frame )
-    input_number3_entry .place(relx=0.5, rely=0.5, anchor="center")
+    input_number3_entry.place(relx=0.5, rely=0.5, anchor="center")
 
-    find_button = Ctk.CTkButton(frame, text= "Find Greatest!",  fg_color="#009E60", border_color="#4F7942",height=20, width=25, font= helv37, border_width= 2, command=find_greatest)
+    find_button = Ctk.CTkButton(frame, text= "Find the Greatest!",  fg_color="#009E60", border_color="#4F7942",height=30, width=30, font= helv38, border_width= 2, command=find_greatest)
     find_button.place(relx=0.5, rely=0.6, anchor="center")
 
 
-    result_label = Ctk.CTkLabel(frame, text="Greatest Number:   ",font=helv36, width=20)
+    result_label = Ctk.CTkLabel(frame, text="Greatest Number:   ",font=helv36, width=20, bg_color="#D1FFBD")
     result_label.place(relx=0.1, rely=0.7)
 
 
 # Run the another mainloop
     win.mainloop()
-
-       
-
-
+# Destroy the window
+    win.destroy()
 
 # Welcome window
 window = Ctk.CTk()
 window.title("Numeria")
 window.geometry("600x600")
 
-
-
 # Overall font
 helv36 = Ctk.CTkFont(family="Helvetica",size=25,weight="bold")
 helv37 = Ctk.CTkFont(family="Helvetica",size=15,weight="bold")
+helv38 = Ctk.CTkFont(family="Helvetica",size=20,weight="bold")
 
 # Set background image
 background_image = tk.PhotoImage(file="Numeria.png")
@@ -105,8 +102,6 @@ enter_button.place(relx=0.5, rely=0.7, anchor="center")
 # Run the mainloop
 window.mainloop()
 
-# Destroy window
-window.destroy()
 
 
 
