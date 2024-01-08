@@ -18,7 +18,20 @@ def finding_greatest_number():
         num2_entry = int(input_num2_entry.get())
         num3_entry = int(input_num3_entry.get())
 
-        
+        if not (num1_entry and num2_entry and num3_entry): 
+             result_label.configure(text="Error: Please fill in all fields!")
+        else:
+            try:
+                num1 = float(num1_entry)
+                num2 = float(num2_entry)
+                num3 = float(num3_entry)
+
+                greatest = max(num1, num2, num3)
+                result_label.configure(text=f"Greatest number: {greatest}")
+            
+            except ValueError:
+                result_label.configure(text="Error: Please enter valid numbers!")
+            
 
                         
 # Another window
