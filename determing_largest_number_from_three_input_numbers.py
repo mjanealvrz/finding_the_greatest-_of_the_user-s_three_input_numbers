@@ -21,7 +21,6 @@ def finding_greatest_number():
     def find_greatest():
 
         # retrieve input values in the entry fields
-        # convert input values to integers
         try:
             number1_entry = input_number1_entry.get().strip()
             number2_entry = input_number2_entry.get().strip()
@@ -30,11 +29,23 @@ def finding_greatest_number():
             # if the fields are empty it will display error
             if len(number1_entry) == 0 or len(number2_entry) == 0 or len(number3_entry) == 0:
                 result_label.configure(text="Error: Please fill in all fields!")
+        
             else:
-                    # find the maximum value 
-                    greatest = int( max(number1_entry, number2_entry, number3_entry))
+                    # convert input values to integers
+                    num1 = int(number1_entry)
+                    num2 = int(number2_entry)
+                    num3 = int(number3_entry)
+
+                    # compare numbers to find the greatest
+                    if num1 >= num2 and num1 >= num3:
+                        greatest_number = num1
+                    elif num2 >= num1 and num2 >= num3:
+                        greatest_number = num2
+                    else: 
+                        greatest_number = num3
+                    
                     # display the greatest result
-                    result_label.configure(text=f"Greatest number: {greatest}")
+                    result_label.configure(text=f"Greatest number: {greatest_number}")
 
          # display the error in the result label            
         except ValueError:
