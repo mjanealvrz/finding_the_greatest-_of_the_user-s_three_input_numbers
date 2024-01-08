@@ -2,7 +2,7 @@
 # Ask user to input 3 numbers. Find and print the greatest number using only if-else statement
 
 
-# ====================== Actual Code ========================================================================
+# ====================== Actual Code ==========================================================================================
 
 # Using tkinter and customtkinter for the program's module
 import tkinter as tk
@@ -32,9 +32,9 @@ def finding_greatest_number():
         
             else:
                     # convert input values to integers
-                    num1 = int(number1_entry)
-                    num2 = int(number2_entry)
-                    num3 = int(number3_entry)
+                    num1 = float(number1_entry)
+                    num2 = float(number2_entry)
+                    num3 = float(number3_entry)
 
                     # compare numbers to find the greatest
                     if num1 >= num2 and num1 >= num3:
@@ -56,9 +56,9 @@ def finding_greatest_number():
     win.title("Input three number")
     win.geometry("600x600")
        
-# make GUI components (button, entry fields, and labels).
-    # specify where GUI items should be placed in the window
-    # attach the method find_greatest() to the button.
+# Make GUI components (button, entry fields, and labels).
+    # Specify where GUI items should be placed in the window
+    # Attach the method find_greatest() to the button.
 
     frame = Ctk.CTkFrame(win, width=500, height=500, fg_color="transparent",border_width=5, border_color="#4F7942", bg_color="#D1FFBD")
     frame.place(relx=0.5, rely=0.5, anchor= "center")
@@ -112,10 +112,6 @@ enter_button.place(relx=0.5, rely=0.7, anchor="center")
 
 # Run the mainloop
 window.mainloop()
-
-
-
-
 
 # pseudocode
 
