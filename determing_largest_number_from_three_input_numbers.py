@@ -26,7 +26,7 @@ def finding_greatest_number():
                 num2 = float(num2_entry)
                 num3 = float(num3_entry)
 
-                greatest = max(num1, num2, num3)
+                greatest = int( max(num1, num2, num3))
                 result_label.configure(text=f"Greatest number: {greatest}")
             
             except ValueError:
