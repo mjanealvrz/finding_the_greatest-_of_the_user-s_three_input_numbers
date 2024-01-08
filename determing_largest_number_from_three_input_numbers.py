@@ -9,6 +9,12 @@ import tkinter as tk
 from tkinter import PhotoImage
 import customtkinter as Ctk
 
+# Set appearance mode
+Ctk.set_appearance_mode("light")
+
+# Set color theme
+Ctk.set_default_color_theme("green")
+
 
 def finding_greatest_number():
     global result_label
