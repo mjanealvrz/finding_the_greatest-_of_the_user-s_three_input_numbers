@@ -17,12 +17,12 @@ def finding_greatest_number():
         # retrieve input values in the entry fields
         # convert input values to integers
         try:
-            number1_entry = int(input_number1_entry.get())
-            number2_entry = int(input_number2_entry.get())
-            number3_entry = int(input_number3_entry.get())
+            number1_entry = input_number1_entry.get().strip()
+            number2_entry = input_number2_entry.get().strip()
+            number3_entry = input_number3_entry.get().strip()
 
             # if the fields are empty it will display error
-            if not (number1_entry and number2_entry and number3_entry): 
+            if len(number1_entry) == 0 or len(number2_entry) == 0 or len(number3_entry) == 0:
                 result_label.configure(text="Error: Please fill in all fields!")
             else:
                     # find the maximum value 
